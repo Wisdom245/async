@@ -1,0 +1,132 @@
+#user{
+    display: inline;
+    margin-right: 10.2em;
+}
+#link{
+    display: inline;
+    text-align: center;
+    word-spacing: 1.5em;
+}
+p{
+    display: inline;
+}
+nav>{
+    display: inline;
+}
+a{
+    text-decoration: none;
+    color: rgb(32, 31, 31);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+a:visited{
+    color: goldenrod;
+}
+#picDiv{
+    background-image: url(imgs/download.jpg);
+    height: 17em;
+    margin-top: 0;
+    text-align: center;
+    margin-bottom: 1em;
+}
+#search{
+    margin-top: 10em;
+    width: 25em;
+    height: 2.4em;
+    border-radius: 15em;
+}
+a:hover{
+    color: goldenrod;
+}
+header{
+    border-bottom-color: goldenrod;
+    border-style: groove;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    padding-bottom: 1em;
+    margin-bottom: 0 !important;
+}
+.btns{
+    display: block;
+}
+#admin{
+    word-spacing: normal !important;
+}
+aside{
+    width: 5em;
+}
+.btns{
+    margin-bottom: .7em;
+    width: 10em;
+    height: 2.5em;
+    border-radius: 1em;
+    display: inline;
+    color: rgb(32, 31, 31);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.btns:hover{
+    background-color: goldenrod;
+    color: white;
+}
+#user>p{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.product {
+    border:groove .5px rgb(32, 31, 31);
+    padding: .4em;
+    margin: .3em; 
+    text-align: center;
+    height: 7em;
+    width: 7em;
+    display: inline-block;
+    border-radius: 1em;
+    color: rgb(32, 31, 31);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  .product img {
+    width: 3em;
+    height: 3em;
+  }
+  .product h2 {
+    font-size: .27em;
+    /* margin: 8px 0; */
+  }
+  .product .price {
+    font-size: .3em;
+    /* margin: 8px 0; */
+  }
+  #disp_div{
+    display: inline;
+  }
+#disp_div>{
+    display: inline;
+}
+  /* .product button {
+    padding: 8px 16px;
+    /* font-size: 16px; 
+    cursor: pointer;
+  } */
+.carts{
+    color: white;
+    background-color: goldenrod;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: .21em;
+    border-radius: 1em;
+}
+#disp_div{
+    display: inline;
+}
+.on{
+    background-color: goldenrod;
+    color: white;
+    margin-bottom: .7em;
+    width: 10em;
+    height: 2.5em;
+    border-radius: 1em;
+    display: inline;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#disp{
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serifn;
+}
