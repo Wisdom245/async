@@ -16,20 +16,22 @@
 
 // async function getAllData() {
 //     const [data1, data2]; await Promises.all()
-
 let disp = document.getElementById('disp');
+let productContainer = document.getElementById('disp_div');
 let electronics = document.getElementById("electronics");
 let jewelry = document.getElementById("jewelry");
 let menC = document.getElementById("menC");
 let womenC = document.getElementById("womenC");
-let productContainer = document.getElementById('disp_div')
+let addToCartButton;
 let jewel = [];
-elec = [];
+let elec = [];
 let menc = [];
 let womenc = [];
-
+// let removeFromCartbutton = document.getElementsByClassName("remove");
+let remCarts = document.getElementsByClassName("remCarts")
 let onS 
 let onn
+let remover;
 // Define the async function
 async function fetchJewelry() {
    
@@ -54,34 +56,62 @@ async function fetchJewelry() {
       
       console.log(jewel);
 
-      
+      let cartNo = 0;
+      if(!localStorage.getItem("cart num")){
+        localStorage.setItem("cart num",JSON.stringify(cartNo))
+      }
+      class Product{
+        constructor(title, id, price, image, category){
+          this.image = image
+          this.id = id
+          this.price = price
+          this.title = title
+          this.category = category
+        }
+      }
       onn.forEach(product => {
         let id = document.createAttribute('id')
         let productDiv = document.createElement('div');
         productDiv.className = 'product';
-        let addToCartButton = document.createElement('button')
+        addToCartButton = document.createElement('button')
         addToCartButton.style.display = "inline"
-        addToCartButton.className = "carts"
+        addToCartButton.classList.add("carts")
+        addToCartButton.ser
         addToCartButton.innerHTML = `Add to Cart <i class="fa-solid fa-cart-shopping"></i>`
-
         let productTitle = document.createElement('h2');
         productTitle.textContent = product.title;
 
         let productImg = document.createElement('img');
         productImg.src = product.image;
         productImg.alt = product.title;
+        let pro = new Product(product.image, product.id, product.price, product.title, product.category)
+
+        localStorage.setItem(`Product${pro.id}`, JSON.stringify(pro))
 
         let productPrice = document.createElement('div');
         productPrice.className = 'price';
         productPrice.textContent = `Price: ${product.price}`
         productPrice.style.display = "inline"
-
+        
 
         productDiv.appendChild(productTitle);
         productDiv.appendChild(productImg);
         productDiv.appendChild(productPrice);
         productDiv.appendChild(addToCartButton);
         productDiv.style.textAlign= "center"
+
+        addToCartButton.addEventListener('click', (ev)=>{
+          let click_count = 0
+          if (click_count == 0) {
+            adder(product)
+          } else {
+            if (click_count == 1) {
+              removes(product)
+            }else{
+              click_count = 0
+            }
+          }
+        })
 
         productContainer.appendChild(productDiv);
       });
@@ -142,3 +172,32 @@ womenC.addEventListener('click', (ev)=>{
     fetchJewelry()
 ev.preventDefault
 })
+
+function removes(item) {
+  addToCartButton.innerHTML = "Remove from Cart"
+  localStorage.removeItem(`Cart${item.id}`)
+  addToCartButton.classList.remove("remCarts")
+  click_count += 1
+  alert(click_count)
+  alert(`${product.title} removed from cart successfully`)
+  addToCartButton.classList.add("carts")
+}
+function adder(item) {
+  addToCartButton.innerHTML = "Add to Cart"
+    class CartItem{
+      constructor(price, title, id, quantity, image){
+        this.price =price
+        this.title = title
+        this.id = id
+        this.quantity = quantity
+        this.image = image
+      }
+    }
+    let carted_product = new CartItem(item.price, item.title, item.id, 1, item.image)
+    localStorage.setItem(`Cart${item.id}`, JSON.stringify(carted_product))
+    alert(`${product.title} added to cart successfully`)
+    click_count += 1
+    alert(click_count)
+    addToCartButton.classList.remove("carts")
+    addToCartButton.classList.add("remCarts")
+}

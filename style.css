@@ -18,9 +18,9 @@ a{
     color: rgb(32, 31, 31);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-a:visited{
+/* a:visited{
     color: goldenrod;
-}
+} */
 #picDiv{
     background-image: url(imgs/download.jpg);
     height: 17em;
@@ -109,6 +109,19 @@ aside{
 .carts{
     color: white;
     background-color: goldenrod;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: .21em;
+    border-radius: 1em;
+}
+.carts{
+    color: white !important;
+    background-color: goldenrod !important;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important;
+    font-size: .21em !important;
+    border-radius: 1em !important;
+}.remCarts{
+    color: white;
+    background-color: red;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: .21em;
     border-radius: 1em;

@@ -1,0 +1,66 @@
+body{
+    background: radial-gradient(circle,  white,goldenrod);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+
+}
+main{
+    margin-top: 7em;
+    margin-left: 17em;
+    padding-bottom: 0;
+    background-color: white !important;
+    width: 30em !important;
+    height: 20em !important;
+    text-align: center;
+    text-wrap: scroll;
+    display: grid;
+    grid-template: "form            pic" 100%
+                   "form            pic" 100%
+                   /50%             50%
+    ;   
+    border: 2em;
+}
+form>input{
+    display: block;
+    margin-bottom: 1em;
+    margin-left:3em;
+    margin-top: 1.5em;
+    border-radius: 2em;
+    padding: .5em;
+}
+form{
+    background-color: white;
+    height: 100%;
+    border: groove rgb(32, 31, 31) ;
+    border-radius: 2em; 
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: .5em;
+
+}
+#pic{
+    border: groove rgb(32, 31, 31) ;
+    border-radius: 2em; 
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    background-image: url(imgs/download2.jpg);
+}
+i{
+    color: goldenrod;
+    font-size: 3em;
+}
+button{
+    margin-bottom: .7em;
+    width: 10em;
+    height: 2.5em;
+    border-radius: 1em;
+    display: inline;
+    color: white;
+    background-color: goldenrod;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.remove{
+    color: black !important;
+    background-color: red !important;
+}
